@@ -1,0 +1,53 @@
+{
+	"name": "mal-beni-suef-frontend",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"storybook": "start-storybook -p 6006",
+		"storybook:build": "build-storybook",
+		"prepare": "husky install",
+		"pre-commit": "lint-staged"
+	},
+	"dependencies": {
+		"bootstrap-4-grid": "^3.4.0",
+		"next": "latest",
+		"next-seo": "^4.26.0",
+		"prop-types": "^15.7.2",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"zustand": "^3.5.5"
+	},
+	"devDependencies": {
+		"@storybook/addon-actions": "^6.3.2",
+		"@storybook/addon-essentials": "^6.3.2",
+		"@storybook/addon-links": "^6.3.2",
+		"@storybook/react": "^6.3.2",
+		"autoprefixer": "^10.2.6",
+		"babel-eslint": "^10.1.0",
+		"eslint": "^7.30.0",
+		"eslint-config-airbnb": "^18.2.1",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.23.4",
+		"eslint-plugin-jsx-a11y": "^6.4.1",
+		"eslint-plugin-prettier": "^3.4.0",
+		"eslint-plugin-react": "^7.24.0",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"eslint-plugin-security": "^1.4.0",
+		"eslint-plugin-unicorn": "^34.0.1",
+		"husky": "^7.0.0",
+		"lint-staged": "^11.0.0",
+		"postcss": "^8.3.5",
+		"prettier": "^2.3.2",
+		"tailwindcss": "^2.2.4"
+	},
+	"lint-staged": {
+		"*.(jsx|js)": [
+			"eslint --fix",
+			"prettier --write"
+		]
+	}
+}
