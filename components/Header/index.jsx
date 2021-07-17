@@ -1,36 +1,42 @@
-import React from 'react';
+import PropTypes from "prop-types";
 
-const NavText = props => <a href={props.href} className="text-sm font-bold text-gray-700 px-2 py-1 hover:bg-gray-300 rounded transition-colors duration-300 cursor-pointer">
-			{props.text}
+const NavLink = ({ href, text }) => (
+	<a
+		href={href}
+		className="px-2 py-1 text-sm font-bold text-gray-700 capitalize transition-colors duration-300 rounded cursor-pointer hover:bg-gray-300"
+	>
+		{text}
 	</a>
-
+);
 
 function Header() {
 	return (
-		<header className="container rx-auto">
-			<nav className="flex justify-center pt-4">
-				<div>
-					<ul className="flex space-x-2">
-						<NavText href="/" text="Home" />
-						<NavText href="/about" text="About" />
-						<NavText href="/team" text="Team" />
-						<NavText href="/contact" text="Contact" />
-						<NavText href="/ar" text="Ar" />
-					</ul>
-				</div>
+		<header className="absolute top-0 w-full py-5">
+			<nav className="flex justify-center">
+				<ul className="flex space-x-4">
+					<NavLink href="/" text="home" />
+					<NavLink href="/about" text="about" />
+					<NavLink href="/team" text="team" />
+					<NavLink href="/contact" text="contact" />
+
+					{/* Go to subdomain in the website */}
+					{/* <NavLink href="dashboard.malbsstem.com" text="dashboard" /> */}
+
+					<NavLink href="/ar" text="ar" />
+				</ul>
 			</nav>
-        <div className="row">
-          <div className="col-md-6 pt-32">
-            <h1 className="desc">Welcome To Mal B</h1>
-          <p>We are An organizational team assigned to host Model Arab League Programs
-</p>
-		  </div>
-          <div className="col-md-6">
-            <img src="/img/logo-right.png" alt="" />
-          </div>
-        </div>
 		</header>
-	)
+	);
 }
+
+NavLink.propTypes = {
+	href: PropTypes.string,
+	text: PropTypes.string
+};
+
+NavLink.defaultProps = {
+	href: "#",
+	text: "link"
+};
 
 export default Header;

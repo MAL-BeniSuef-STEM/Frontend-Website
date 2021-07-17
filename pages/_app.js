@@ -1,6 +1,6 @@
 import "../public/global.css";
-import 'bootstrap-4-grid/css/grid.min.css';
-import Layout from '../layout'
+// import 'bootstrap-4-grid/css/grid.min.css';
+import Layout from "../layout";
 
 function MyApp({ Component, pageProps }) {
 	return (
