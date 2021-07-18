@@ -1,28 +1,33 @@
-import Button from ".";
+import Button from "./Button";
 
 export default {
 	component: Button,
 	title: "Button",
 	args: {
-		children: "Button"
+		children: "Button",
+		size: {
+			options: ["large", "medium", "small"],
+			control: { type: "radio" }
+		}
 	}
 };
 
-// export const Primary = () => <Button>Primary</Button>;
-// export const Secondary = () => <Button>Secondary</Button>;
-// export const Success = () => <Button>Success</Button>;
-// export const Danger = () => <Button>Danger</Button>;
-
 const Template = args => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-	children: "Primary Arsgs",
-	onClick: () => {}
+export const Large = Template.bind({});
+Large.args = {
+	children: "Large Button",
+	size: "large"
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-	children: "Secondary Args",
-	onClick: () => {}
+export const Medium = Template.bind({});
+Medium.args = {
+	children: "Medium Button",
+	size: "medium"
+};
+
+export const Small = Template.bind({});
+Small.args = {
+	children: "Small Button",
+	size: "small"
 };

@@ -1,4 +1,4 @@
-import SEO from "../components/SEO";
+import { Card, SEO } from "../components";
 
 export default function Home() {
 	return (
@@ -7,7 +7,7 @@ export default function Home() {
 			<div className="bg-no-repeat bg-cover bg-hero-pattern bg-brand-gray">
 				<section className="container grid items-center justify-center h-screen grid-cols-1 text-center lg:text-left lg:grid-cols-2">
 					<div>
-						<h1 className="leading-tight tracking-wider font-brand-en">
+						<h1 className="leading-tight tracking-wider">
 							Welcome To <br />
 							<b>Mal BeniSuef STEM</b>
 						</h1>
@@ -24,6 +24,9 @@ export default function Home() {
 						/>
 					</div>
 				</section>
+			</div>
+			<div className="container">
+				<Card title="Hello world" />
 			</div>
 		</>
 	);

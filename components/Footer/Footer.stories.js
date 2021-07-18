@@ -1,8 +1,8 @@
-import Header from "./Header";
+import Footer from "./Footer";
 
 export default {
-	component: Header,
-	title: "Header"
+	component: Footer,
+	title: "Footer"
 };
 
 // export const Primary = () => <Button>Primary</Button>;
@@ -10,6 +10,6 @@ export default {
 // export const Success = () => <Button>Success</Button>;
 // export const Danger = () => <Button>Danger</Button>;
 
-const Template = () => <Header />;
+const Template = () => <Footer />;
 
 export const Primary = Template.bind({});
