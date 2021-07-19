@@ -1,7 +1,7 @@
-const tailwindDebugScreens = require("tailwindcss");
+const tailwindDebugScreens = require("tailwindcss-debug-screens");
 
 module.exports = {
-	// mode: "jit",
+	mode: "jit",
 	purge: [
 		"./pages/**/*.{js,ts,jsx,tsx}",
 		"./components/**/*.{js,ts,jsx,tsx}"

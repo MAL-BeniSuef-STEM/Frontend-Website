@@ -16,7 +16,7 @@ export default function Home() {
 							Arab League Programs
 						</p>
 					</div>
-					<div className="flex justify-end">
+					<div className="flex justify-center lg:justify-end">
 						<img
 							src="/logo.png"
 							alt="Mal BeniSuef Logo"

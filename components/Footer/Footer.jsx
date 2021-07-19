@@ -11,11 +11,11 @@ import FooterColumn from "./FooterColumn";
 const Footer = () => {
 	return (
 		<footer className="bg-brand-gray">
-			<div className="container flex justify-between gap-6 py-10">
+			<div className="container flex flex-col-reverse justify-between gap-6 py-10 md:flex-row">
 				<img
 					src="/logo.png"
 					alt="Mal Beni Suef Logo"
-					className="h-64"
+					className="self-center w-64 h-64"
 				/>
 				<FooterColumn
 					heading="about us"
