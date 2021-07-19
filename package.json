@@ -7,12 +7,13 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"storybook": "start-storybook -p 6006",
+		"storybook": "start-storybook -p 6006 -s ./public",
 		"storybook:build": "build-storybook",
 		"prepare": "husky install",
 		"pre-commit": "lint-staged"
 	},
 	"dependencies": {
+		"@storybook/addon-measure": "^2.0.0",
 		"@storybook/addon-postcss": "^2.0.0",
 		"bootstrap-4-grid": "^3.4.0",
 		"esbuild-loader": "^2.13.1",
@@ -22,6 +23,8 @@
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-icons": "^4.2.0",
+		"storybook-addon-next-router": "^3.0.5",
+		"storybook-addon-outline": "^1.4.1",
 		"storybook-addon-turbo-build": "^1.0.0-beta.0",
 		"tailwindcss": "^2.2.4",
 		"tailwindcss-debug-screens": "^2.0.0",

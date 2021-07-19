@@ -10,7 +10,7 @@ import FooterColumn from "./FooterColumn";
 
 const Footer = () => {
 	return (
-		<footer className="bg-brand-gray">
+		<footer className="w-full bg-brand-gray">
 			<div className="container flex flex-col-reverse justify-between gap-6 py-10 md:flex-row">
 				<img
 					src="/logo.png"
