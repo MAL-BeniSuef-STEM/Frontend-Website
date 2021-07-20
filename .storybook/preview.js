@@ -1,20 +1,19 @@
 import { RouterContext } from "next/dist/next-server/lib/router-context";
 import "../public/global.css";
 
-import {
-	MINIMAL_VIEWPORTS,
-	INITIAL_VIEWPORTS
-} from "@storybook/addon-viewport";
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 export const decorators = [
 	Story => (
-		<div className="flex items-center">
+		<div className="flex justify-center">
 			<Story />
 		</div>
 	)
 ];
 
 export const parameters = {
+	// to remove the padding
+	layout: "fullscreen",
 	actions: { argTypesRegex: "^on[A-Z].*" },
 	viewport: {
 		viewports: INITIAL_VIEWPORTS

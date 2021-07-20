@@ -7,7 +7,13 @@ export default {
 		children: "Button",
 		size: {
 			options: ["large", "medium", "small"],
-			control: { type: "radio" }
+			control: { type: "inline-check" }
+		},
+		shadow: {
+			control: "boolean"
+		},
+		onClick: {
+			control: false
 		}
 	}
 };

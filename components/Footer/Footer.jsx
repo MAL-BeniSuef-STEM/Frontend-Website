@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import {
 	GrFacebookOption,
 	GrLinkedinOption,
@@ -9,6 +10,7 @@ import {
 import FooterColumn from "./FooterColumn";
 
 const Footer = () => {
+	const router = useRouter();
 	return (
 		<footer className="w-full bg-brand-gray">
 			<div className="container flex flex-col-reverse justify-between gap-6 py-10 md:flex-row">
@@ -39,12 +41,26 @@ const Footer = () => {
 			</div>
 			<div className="flex flex-col items-center justify-center pb-5 space-y-3">
 				<div className="flex items-center justify-between w-40">
-					<GrLinkedinOption />
-					<GrTwitter />
-					<GrFacebookOption />
-					<GrInstagram />
+					<GrLinkedinOption
+						onClick={() =>
+							router.push(
+								"https://www.linkedin.com/company/bstemal"
+							)
+						}
+					/>
+					<GrTwitter
+						onClick={() => router.push("https://www.twitter.com")}
+					/>
+					<GrFacebookOption
+						onClick={() =>
+							router.push("https://www.facebook.com/BSTEMAL")
+						}
+					/>
+					<GrInstagram
+						onClick={() => router.push("https://www.instagram.com")}
+					/>
 				</div>
-				<p className="text-gray-700 capitalize">
+				<p className="px-2 text-center text-gray-700 capitalize">
 					Copyright @{new Date().getFullYear()} BeniSuef MAL. All
 					rights reversed
 				</p>

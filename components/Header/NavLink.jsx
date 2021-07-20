@@ -1,20 +1,22 @@
-import PropTypes from "prop-types";
-
+import Link from "next/link";
 import { useRouter } from "next/router";
+import PropTypes from "prop-types";
 
 const NavLink = ({ href, text }) => {
 	const router = useRouter();
 	const active = router.pathname.startsWith(href);
-	console.log(router.pathname);
 	return (
-		<a
-			href={href}
-			className={`px-2 py-1 text-lg font-bold text-gray-700 capitalize transition-colors duration-300 ${
-				active ? "border-brand-1" : ""
-			} border-b-2 cursor-pointer hover:border-2 hover:border-brand-1`}
-		>
-			{text}
-		</a>
+		<Link href={href}>
+			<a
+				href={href}
+				className={`px-2 py-1 text-sm md:text-lg font-bold text-gray-700 capitalize transition-colors duration-300
+				${
+					active ? "border-brand-1" : ""
+				} border-b-2 cursor-pointer hover:border-b-2 hover:border-brand-1`}
+			>
+				{text}
+			</a>
+		</Link>
 	);
 };
 
