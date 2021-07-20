@@ -1,7 +1,7 @@
-const tailwindDebugScreens = require("tailwindcss");
+const tailwindDebugScreens = require("tailwindcss-debug-screens");
 
 module.exports = {
-	// mode: "jit",
+	mode: "jit",
 	purge: [
 		"./pages/**/*.{js,ts,jsx,tsx}",
 		"./components/**/*.{js,ts,jsx,tsx}"
@@ -9,6 +9,9 @@ module.exports = {
 	darkMode: "class", // or 'media' or 'class'
 	theme: {
 		extend: {
+			zIndex: {
+				"-10": "-10"
+			},
 			colors: {
 				"brand-1": "#1D2971",
 				"brand-2": "#5762A1",

@@ -1,19 +1,10 @@
-import PropTypes from "prop-types";
+import NavLink from "./NavLink";
 
-const NavLink = ({ href, text }) => (
-	<a
-		href={href}
-		className="px-2 py-1 text-sm font-bold text-gray-700 capitalize transition-colors duration-300 rounded cursor-pointer hover:bg-gray-300"
-	>
-		{text}
-	</a>
-);
-
-function Header() {
+const Header = () => {
 	return (
 		<header className="absolute top-0 w-full py-5">
 			<nav className="flex justify-center">
-				<ul className="flex space-x-4">
+				<ul className="flex flex-wrap justify-center space-x-2 md:flex-nowrap md:space-x-4">
 					<NavLink href="/" text="home" />
 					<NavLink href="/about" text="about" />
 					<NavLink href="/team" text="team" />
@@ -27,16 +18,6 @@ function Header() {
 			</nav>
 		</header>
 	);
-}
-
-NavLink.propTypes = {
-	href: PropTypes.string,
-	text: PropTypes.string
-};
-
-NavLink.defaultProps = {
-	href: "#",
-	text: "link"
 };
 
 export default Header;
