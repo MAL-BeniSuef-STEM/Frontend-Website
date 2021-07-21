@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 
 const Card = ({ title, content, image, page }) => {
 	return (
-		<div className="grid w-full grid-cols-1 p-2 m-2 md:grid-cols-3 gap-x-4">
+		<div className="grid w-full grid-cols-1 p-2 mx-2 my-14 md:grid-cols-3 gap-x-4">
 			<div className="flex items-center justify-center">
 				<img src={image} alt={title} className="h-48" />
 			</div>
@@ -14,7 +14,7 @@ const Card = ({ title, content, image, page }) => {
 				<h3 className="capitalize text-brand-1">{title}</h3>
 				<p className="mt-6 text-[#797979]">{content}</p>
 				<div className="w-full mt-10">
-					<Button size="medium" shadow>
+					<Button size="small" shadow>
 						Read More
 					</Button>
 				</div>

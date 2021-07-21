@@ -15,10 +15,9 @@ function MyApp({ Component, pageProps }) {
 		setWidth(document.body.clientWidth - 100);
 	}, []);
 
-	// const random = arr => {
-	// 	let index = Math.floor(Math.random() * arr.length);
-	// 	return arr[index];
-	// };
+	const random = arr => {
+		return arr[Math.floor(Math.random() * arr.length)];
+	};
 
 	const makeArr = num => {
 		const arr = [];
@@ -30,7 +29,6 @@ function MyApp({ Component, pageProps }) {
 
 	const randomRotation = () => {
 		const rotateArr = [
-			"rotate-0",
 			"rotate-1",
 			"rotate-2",
 			"rotate-3",
@@ -38,26 +36,32 @@ function MyApp({ Component, pageProps }) {
 			"rotate-12",
 			"rotate-45"
 		];
-		return rotateArr[Math.floor(Math.random() * rotateArr.length)];
+		return random(rotateArr);
+	};
+
+	const randomSize = () => {
+		const sizeArr = ["h-32", "h-28", "h-36"];
+		return random(sizeArr);
 	};
 
 	return (
 		<Layout>
+			{/* To make the random images in the background */}
+			<div className="absolute inset-0 overflow-hidden -z-10">
+				{makeArr(10).map(index => (
+					<img
+						alt="vector"
+						key={index}
+						src="/vector.png"
+						className={`absolute transform ${randomSize()} ${randomRotation()} select-none opacity-70`}
+						style={{
+							top: Math.floor(Math.random() * height - 100),
+							left: Math.floor(Math.random() * width + 100)
+						}}
+					/>
+				))}
+			</div>
 			<Component {...pageProps} />
-			{makeArr(10).map(index => (
-				<img
-					alt="vector"
-					key={index}
-					src="/vector.png"
-					className={`absolute w-20 h-20 -z-10 ${randomRotation()}`}
-					style={{
-						top: `calc(${Math.floor(
-							Math.random() * height + 100
-						)} + 100vw)`,
-						left: Math.floor(Math.random() * width + 100)
-					}}
-				/>
-			))}
 		</Layout>
 	);
 }
