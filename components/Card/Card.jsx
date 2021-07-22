@@ -5,11 +5,11 @@ import Button from "../Button/Button";
 
 const Card = ({ title, content, image, page }) => {
 	return (
-		<div className="grid w-full grid-cols-1 p-2 mx-2 my-14 md:grid-cols-3 gap-x-4">
+		<div className="grid w-full grid-cols-1 p-2 my-14 md:grid-cols-2 gap-x-4">
 			<div className="flex items-center justify-center">
 				<img src={image} alt={title} className="h-48" />
 			</div>
-			<div className="flex flex-col justify-center col-span-1 md:col-span-2">
+			<div className="flex flex-col justify-center">
 				<h5 className="capitalize">{page}</h5>
 				<h3 className="capitalize text-brand-1">{title}</h3>
 				<p className="mt-6 text-[#797979]">{content}</p>

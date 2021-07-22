@@ -9,6 +9,7 @@ module.exports = {
 		"@storybook/addon-essentials",
 		"@storybook/addon-measure",
 		"@storybook/addon-postcss",
+		"@storybook/addon-a11y",
 		{
 			name: "storybook-addon-turbo-build",
 			options: {
