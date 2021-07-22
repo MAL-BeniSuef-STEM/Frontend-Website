@@ -1,4 +1,5 @@
 import { SEO } from "../components";
+import ImageSlider from "../components/Slider/Slider";
 
 export default function About() {
 	return (
@@ -21,6 +22,7 @@ export default function About() {
 					</div>
 				</section>
 			</div>
+			<ImageSlider />
 		</>
 	);
 }
