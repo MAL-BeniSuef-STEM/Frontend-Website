@@ -1,4 +1,4 @@
-import { Card, SEO } from "../components";
+import { SEO } from "../components";
 
 export default function About() {
 	return (
@@ -9,12 +9,8 @@ export default function About() {
 					<div>
 						<h1 className="leading-tight tracking-wider">
 							Welcome To <br />
-							<b>Mal BeniSuef STEM</b>
+							<b>ABout Page</b>
 						</h1>
-						<p>
-							We are An organizational team assigned to host Model
-							Arab League Programs
-						</p>
 					</div>
 					<div className="flex justify-center lg:justify-end">
 						<img
@@ -24,26 +20,6 @@ export default function About() {
 						/>
 					</div>
 				</section>
-			</div>
-			<div className="container">
-				<Card
-					title="We will keep you updated!"
-					page="about us"
-					image="/vectors/vector1.png"
-					content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, totam?"
-				/>
-				<Card
-					title="We will keep you updated!"
-					page="about us"
-					image="/vectors/vector2.png"
-					content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, totam?"
-				/>
-				<Card
-					title="We will keep you updated!"
-					page="about us"
-					image="/vectors/vector3.png"
-					content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, totam?"
-				/>
 			</div>
 		</>
 	);

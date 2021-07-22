@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import NextNProgress from "nextjs-progressbar";
 
 // Global Styles
 import "../public/global.css";
@@ -45,24 +46,32 @@ function MyApp({ Component, pageProps }) {
 	};
 
 	return (
-		<Layout>
-			{/* To make the random images in the background */}
-			<div className="absolute inset-0 overflow-hidden -z-10">
-				{makeArr(10).map(index => (
-					<img
-						alt="vector"
-						key={index}
-						src="/vector.png"
-						className={`absolute transform ${randomSize()} ${randomRotation()} select-none opacity-70`}
-						style={{
-							top: Math.floor(Math.random() * height - 100),
-							left: Math.floor(Math.random() * width + 100)
-						}}
-					/>
-				))}
-			</div>
-			<Component {...pageProps} />
-		</Layout>
+		<>
+			<NextNProgress
+				color="dodgerblue"
+				height={6}
+				startPosition={0.3}
+				options={{ showSpinner: false }}
+			/>
+			<Layout>
+				{/* To make the random images in the background */}
+				<div className="absolute inset-0 overflow-hidden -z-10">
+					{makeArr(10).map(index => (
+						<img
+							alt="vector"
+							key={index}
+							src="/vector.png"
+							className={`absolute transform ${randomSize()} ${randomRotation()} select-none opacity-70`}
+							style={{
+								top: Math.floor(Math.random() * height - 100),
+								left: Math.floor(Math.random() * width + 100)
+							}}
+						/>
+					))}
+				</div>
+				<Component {...pageProps} />
+			</Layout>
+		</>
 	);
 }
 

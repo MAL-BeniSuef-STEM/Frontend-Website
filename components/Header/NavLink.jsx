@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const NavLink = ({ href, text }) => {
 	const router = useRouter();
-	const active = router.pathname.startsWith(href);
+	const active = router.pathname === href;
 	return (
 		<Link href={href}>
 			<a
