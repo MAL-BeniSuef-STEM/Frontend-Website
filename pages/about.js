@@ -1,5 +1,4 @@
-import { SEO } from "../components";
-import ImageSlider from "../components/Slider/Slider";
+import { SEO, ImageSlider } from "../components";
 
 export default function About() {
 	return (

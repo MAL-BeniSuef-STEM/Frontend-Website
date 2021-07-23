@@ -1,7 +1,6 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "bootstrap-4-grid/css/grid.min.css";
 
 function ImageSlider() {
 	const settings = {
