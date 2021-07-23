@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { useRouter } from "next/router";
 import {
 	GrFacebookOption,
@@ -10,21 +11,22 @@ import {
 import FooterColumn from "./FooterColumn";
 
 const Footer = () => {
+	const t = useTranslations("Footer");
 	const router = useRouter();
 	return (
 		<footer className="w-full bg-brand-gray">
-			<div className="container flex flex-col-reverse justify-between gap-6 py-10 md:flex-row">
+			<div className="container flex flex-col-reverse justify-between gap-6 py-10 lg:flex-row">
 				<img
 					src="/logo.png"
 					alt="Mal Beni Suef Logo"
 					className="self-center w-64 h-64"
 				/>
 				<FooterColumn
-					heading="about us"
+					heading={t("about-us")}
 					sections={["who are we?", "our goal", "our team"]}
 				/>
 				<FooterColumn
-					heading="team"
+					heading={t("team")}
 					sections={[
 						"management",
 						"public relation",
@@ -35,7 +37,7 @@ const Footer = () => {
 					]}
 				/>
 				<FooterColumn
-					heading="contact"
+					heading={t("contact")}
 					sections={["+2 012 3456 789", "BSMAL@gmail.com"]}
 				/>
 			</div>
@@ -61,8 +63,9 @@ const Footer = () => {
 					/>
 				</div>
 				<p className="px-2 text-center text-gray-700 capitalize">
-					Copyright @{new Date().getFullYear()} BeniSuef MAL. All
-					rights reversed
+					{t("copyright")} © {new Date().getFullYear()} BeniSuef MAL.
+					<br />
+					{t("all-right-reserved")}
 				</p>
 			</div>
 		</footer>

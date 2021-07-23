@@ -1,15 +1,19 @@
+import { useTranslations } from "next-intl";
+
+// Components
+import Layout from "../layout";
 import { SEO, ImageSlider } from "../components";
 
-export default function About() {
+const About = () => {
+	const t = useTranslations();
 	return (
-		<>
+		<Layout>
 			<SEO title="About US" />
 			<div className="bg-no-repeat bg-cover bg-hero-pattern bg-brand-gray">
 				<section className="container flex flex-col items-center h-screen text-center justify-evenly lg:flex-row lg:justify-between lg:text-left">
 					<div>
-						<h1 className="leading-tight tracking-wider">
-							Welcome To <br />
-							<b>About Page</b>
+						<h1 className="font-bold leading-tight tracking-wider">
+							{t("about-page")}
 						</h1>
 					</div>
 					<div className="flex justify-center lg:justify-end">
@@ -23,10 +27,23 @@ export default function About() {
 			</div>
 			<div className="container my-5">
 				<h1 className="my-4 text-center uppercase text-brand-1">
-					About Team
+					{t("about-team")}
 				</h1>
 				<ImageSlider />
 			</div>
-		</>
+		</Layout>
 	);
+};
+
+export function getStaticProps({ locale }) {
+	return {
+		props: {
+			messages: {
+				...require(`../messages/shared/${locale}.json`),
+				...require(`../messages/about/${locale}.json`)
+			}
+		}
+	};
 }
+
+export default About;

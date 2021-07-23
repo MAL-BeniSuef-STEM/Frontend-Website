@@ -1,21 +1,20 @@
-import { SEO } from "../components";
-import Button from "../components/Button/Button";
+import { useTranslations } from "next-intl";
 
-function Contact() {
+// Components
+import Layout from "../layout";
+import { Button, SEO } from "../components";
+
+const Contact = () => {
+	const t = useTranslations();
 	return (
-		<>
-			<SEO title="About US" />
+		<Layout>
+			<SEO title="Contact Us" />
 			<div className="bg-no-repeat bg-cover bg-hero-pattern bg-brand-gray">
 				<section className="container flex flex-col items-center h-screen text-center justify-evenly lg:flex-row lg:justify-between lg:text-left">
 					<div>
-						<h1 className="leading-tight tracking-wider">
-							Welcome To <br />
-							<b>Mal BeniSuef STEM</b>
+						<h1 className="font-bold leading-tight tracking-wider">
+							{t("contact-page")}
 						</h1>
-						<p>
-							We are An organizational team assigned to host Model
-							Arab League Programs
-						</p>
 					</div>
 					<div className="flex justify-center lg:justify-end">
 						<img
@@ -27,26 +26,38 @@ function Contact() {
 				</section>
 			</div>
 			<div className="container">
-				<div className="grid w-full grid-cols-1 p-2 my-14 md:grid-cols-3 gap-x-4">
-					<div className="mt-3 text-center">
-						<img src="/Vectorc.png" alt="s" className="mx-auto" />
-						<h3 className="mt-3 capitalize">Call Us</h3>
+				<div className="grid grid-cols-1 gap-4 p-2 my-14 md:grid-cols-3">
+					<div className="text-center">
+						<img
+							src="/Vectorc.png"
+							alt="call icon"
+							className="mx-auto"
+						/>
+						<h3 className="mt-3 capitalize">{t("call-us")}</h3>
 						<p className="mt-3 text-[#797979]">
 							Lorem ipsum dolor, sit amet consectetur adipisicing
 							elit. Temporibus dolore ab perspiciatis?
 						</p>
 					</div>
-					<div className="mt-3 text-center">
-						<img src="/Vectorc.png" alt="s" className="mx-auto" />
-						<h3 className="mt-3 capitalize">Call Us</h3>
+					<div className="text-center">
+						<img
+							src="/Vectorc.png"
+							alt="call icon"
+							className="mx-auto"
+						/>
+						<h3 className="mt-3 capitalize">{t("call-us")}</h3>
 						<p className="mt-3 text-[#797979]">
 							Lorem ipsum dolor, sit amet consectetur adipisicing
 							elit. Temporibus dolore ab perspiciatis?
 						</p>
 					</div>
-					<div className="mt-3 text-center">
-						<img src="/Vectorc.png" alt="s" className="mx-auto" />
-						<h3 className="mt-3 capitalize">Call Us</h3>
+					<div className="text-center">
+						<img
+							src="/Vectorc.png"
+							alt="call icon"
+							className="mx-auto"
+						/>
+						<h3 className="mt-3 capitalize">{t("call-us")}</h3>
 						<p className="mt-3 text-[#797979]">
 							Lorem ipsum dolor, sit amet consectetur adipisicing
 							elit. Temporibus dolore ab perspiciatis?
@@ -64,9 +75,9 @@ function Contact() {
 					/>
 				</div>
 				<div className="flex flex-col justify-center">
-					<section className="text-gray-600 body-font ">
+					<section className="text-gray-600 body-font">
 						<div className="flex flex-col w-full mt-8 bg-white lg:w-3/4 md:w-full md:py-8 md:mt-0">
-							<div className="mb-4 ">
+							<div className="mb-4">
 								<label
 									htmlFor="name"
 									className="text-sm leading-7 text-gray-600"
@@ -80,7 +91,7 @@ function Contact() {
 									className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-white border border-gray-300 rounded outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
 								/>
 							</div>
-							<div className="mb-4 ">
+							<div className="mb-4">
 								<label
 									htmlFor="email"
 									className="text-sm leading-7 text-gray-600"
@@ -91,10 +102,10 @@ function Contact() {
 									type="email"
 									id="email"
 									name="email"
-									className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-white border border-gray-300 rounded outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+									className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-white border-2 border-gray-300 rounded outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
 								/>
 							</div>
-							<div className="mb-4 ">
+							<div className="mb-4">
 								<label
 									htmlFor="message"
 									className="text-sm leading-7 text-gray-600"
@@ -114,8 +125,19 @@ function Contact() {
 					</section>
 				</div>
 			</div>
-		</>
+		</Layout>
 	);
+};
+
+export function getStaticProps({ locale }) {
+	return {
+		props: {
+			messages: {
+				...require(`../messages/shared/${locale}.json`),
+				...require(`../messages/contact/${locale}.json`)
+			}
+		}
+	};
 }
 
 export default Contact;

@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
+import { NextIntlProvider } from "next-intl";
 import NextNProgress from "nextjs-progressbar";
 
 // Global Styles
 import "../public/global.css";
 
 // Components
-import Layout from "../layout";
+// import Layout from "../layout";
 
 function MyApp({ Component, pageProps }) {
 	const [height, setHeight] = useState(0);
@@ -53,7 +54,21 @@ function MyApp({ Component, pageProps }) {
 				startPosition={0.3}
 				options={{ showSpinner: false }}
 			/>
-			<Layout>
+			<NextIntlProvider
+				// To achieve consistent date, time and number formatting
+				// across the app, you can define a set of global formats.
+				formats={{
+					dateTime: {
+						short: {
+							day: "numeric",
+							month: "long",
+							year: "numeric"
+						}
+					}
+				}}
+				messages={pageProps.messages}
+				timeZone="Africa/Cairo"
+			>
 				{/* To make the random images in the background */}
 				<div className="absolute inset-0 overflow-hidden -z-10">
 					{makeArr(10).map(index => (
@@ -70,7 +85,7 @@ function MyApp({ Component, pageProps }) {
 					))}
 				</div>
 				<Component {...pageProps} />
-			</Layout>
+			</NextIntlProvider>
 		</>
 	);
 }

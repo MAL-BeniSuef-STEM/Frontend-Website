@@ -2,11 +2,11 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 
-const NavLink = ({ href, text }) => {
+const NavLink = ({ href, text, locale }) => {
 	const router = useRouter();
 	const active = router.pathname === href;
 	return (
-		<Link href={href}>
+		<Link href={href} locale={locale}>
 			<a
 				href={href}
 				className={`px-2 py-1 text-sm md:text-lg font-bold text-gray-700 capitalize transition-colors duration-300
@@ -22,12 +22,14 @@ const NavLink = ({ href, text }) => {
 
 NavLink.propTypes = {
 	href: PropTypes.string,
-	text: PropTypes.string
+	text: PropTypes.string,
+	locale: PropTypes.string
 };
 
 NavLink.defaultProps = {
 	href: "#",
-	text: "link"
+	text: "link",
+	locale: false
 };
 
 export default NavLink;

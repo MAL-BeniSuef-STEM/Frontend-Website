@@ -1,0 +1,23 @@
+{
+	"Navigation": {
+		"index": "Start",
+		"about": "Über",
+		"team": "Mannschaft",
+		"contact": "Kontakt"
+	},
+	"Footer": {
+		"about-us": "über uns",
+		"team": "Mannschaft",
+		"contact": "Kontakt",
+		"copyright": "Urheberrechte",
+		"all-right-reserved": "Alle Rechte vorbehalten",
+		"committees": [
+			"Verwaltung",
+			"Öffentlichkeitsarbeit",
+			"technischer Support",
+			"Grafikdesign",
+			"Humanressourcen",
+			"und mehr..."
+		]
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"Navigation": {
+		"index": "Home",
+		"about": "About",
+		"team": "Team",
+		"contact": "Contact"
+	},
+	"Footer": {
+		"about-us": "About us",
+		"team": "Team",
+		"contact": "Contact",
+		"copyright": "Copyright",
+		"all-right-reserved": "All rights reserved",
+		"committees": [
+			"management",
+			"public relation",
+			"technical support",
+			"graphic design",
+			"human resources",
+			"and more..."
+		]
+	}
+}

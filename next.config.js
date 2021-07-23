@@ -15,6 +15,7 @@ function makeEsbuildMinify(config, options) {
 }
 
 module.exports = {
+	// I18n: Internalization
 	i18n: {
 		locales: ["en", "de"],
 		defaultLocale: "en"
