@@ -29,7 +29,7 @@ function Contact() {
 			<div className="container">
 				<div className="grid w-full grid-cols-1 p-2 my-14 md:grid-cols-3 gap-x-4">
 					<div className="mt-3 text-center">
-						<img src="/vectorc.png" alt="s" className="mx-auto" />
+						<img src="/Vectorc.png" alt="s" className="mx-auto" />
 						<h3 className="mt-3 capitalize">Call Us</h3>
 						<p className="mt-3 text-[#797979]">
 							Lorem ipsum dolor, sit amet consectetur adipisicing
@@ -37,7 +37,7 @@ function Contact() {
 						</p>
 					</div>
 					<div className="mt-3 text-center">
-						<img src="/vectorc.png" alt="s" className="mx-auto" />
+						<img src="/Vectorc.png" alt="s" className="mx-auto" />
 						<h3 className="mt-3 capitalize">Call Us</h3>
 						<p className="mt-3 text-[#797979]">
 							Lorem ipsum dolor, sit amet consectetur adipisicing
@@ -45,7 +45,7 @@ function Contact() {
 						</p>
 					</div>
 					<div className="mt-3 text-center">
-						<img src="/vectorc.png" alt="s" className="mx-auto" />
+						<img src="/Vectorc.png" alt="s" className="mx-auto" />
 						<h3 className="mt-3 capitalize">Call Us</h3>
 						<p className="mt-3 text-[#797979]">
 							Lorem ipsum dolor, sit amet consectetur adipisicing
@@ -58,7 +58,7 @@ function Contact() {
 			<div className="grid w-full grid-cols-1 p-2 my-14 md:grid-cols-2 gap-x-4">
 				<div className="flex items-center justify-center">
 					<img
-						src="/vectorc.png"
+						src="/Vectorc.png"
 						alt="/vectorc.png"
 						className="h-48"
 					/>
