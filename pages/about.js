@@ -9,7 +9,7 @@ export default function About() {
 					<div>
 						<h1 className="leading-tight tracking-wider">
 							Welcome To <br />
-							<b>ABout Page</b>
+							<b>About Page</b>
 						</h1>
 					</div>
 					<div className="flex justify-center lg:justify-end">
@@ -21,7 +21,12 @@ export default function About() {
 					</div>
 				</section>
 			</div>
-			<ImageSlider />
+			<div className="container my-5">
+				<h1 className="my-4 text-center uppercase text-brand-1">
+					About Team
+				</h1>
+				<ImageSlider />
+			</div>
 		</>
 	);
 }

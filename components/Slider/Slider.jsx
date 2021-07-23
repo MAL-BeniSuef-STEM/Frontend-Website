@@ -2,14 +2,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function ImageSlider() {
+const ImageSlider = () => {
 	const settings = {
 		dot: true,
-		infinite: true,
 		speed: 500,
 		slidesToShow: 3,
 		slidesToScroll: 1,
-		cssEase: "linear",
+		cssEase: "ease",
 		responsive: [
 			{
 				breakpoint: 1024,
@@ -37,65 +36,32 @@ function ImageSlider() {
 			}
 		]
 	};
+
 	return (
-		<div className="container mt-5 mb-5 carousel">
-			<h1 className="slider_title">About Team</h1>
-			<Slider {...settings}>
-				<div className="card-wrapper">
-					<div className="card">
-						<div className="card-image">
-							<img src="/test.jpg" alt="" />
+		<Slider {...settings}>
+			{[0, 1, 2, 3, 4].map(element => (
+				<div key={element} className="w-full px-2">
+					<div className="w-full h-auto cursor-pointer">
+						<div className="overflow-hidden rounded-t-2xl">
+							<img
+								src="/test.jpg"
+								alt="Ahmed Waled - Vice Head IT"
+								title="Ahmed Waled - Vice Head IT"
+							/>
 						</div>
-						<div className="details">
-							<h5>
-								AhmedWaled{" "}
-								<span className="jop-title">UI Developer</span>
+						<div className="w-full h-auto p-2 font-thin text-center bg-brand-gray rounded-b-2xl">
+							<h5 className="text-center text-brand-1">
+								Ahmed Waled
 							</h5>
+							<span className="leading-loose text-black capitalize">
+								Vice Head IT
+							</span>
 						</div>
 					</div>
 				</div>
-				<div className="card-wrapper">
-					<div className="card">
-						<div className="card-image">
-							<img src="/test.jpg" alt="" />
-						</div>
-						<div className="details">
-							<h5>
-								AhmedWaled{" "}
-								<span className="jop-title">UI Developer</span>
-							</h5>
-						</div>
-					</div>
-				</div>
-				<div className="card-wrapper">
-					<div className="card">
-						<div className="card-image">
-							<img src="/test.jpg" alt="" />
-						</div>
-						<div className="details">
-							<h5>
-								AhmedWaled{" "}
-								<span className="jop-title">UI Developer</span>
-							</h5>
-						</div>
-					</div>
-				</div>
-				<div className="card-wrapper">
-					<div className="card">
-						<div className="card-image">
-							<img src="/test.jpg" alt="" />
-						</div>
-						<div className="details">
-							<h5>
-								AhmedWaled{" "}
-								<span className="jop-title">UI Developer</span>
-							</h5>
-						</div>
-					</div>
-				</div>
-			</Slider>
-		</div>
+			))}
+		</Slider>
 	);
-}
+};
 
 export default ImageSlider;

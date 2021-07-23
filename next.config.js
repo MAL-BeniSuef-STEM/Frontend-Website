@@ -1,5 +1,6 @@
 const { ESBuildMinifyPlugin } = require("esbuild-loader");
 
+// EsBuild
 function makeEsbuildMinify(config, options) {
 	const terserIndex = config.optimization.minimizer.findIndex(
 		minimizer => minimizer.constructor.name === "TerserPlugin"
@@ -13,19 +14,11 @@ function makeEsbuildMinify(config, options) {
 	}
 }
 
-// function makeEsbuildLoader(config) {
-// 	const jsLoader = config.module.rules.find(
-// 		rule => rule.test && rule.test.test(/\.jsx?$/)
-// 	);
-// 	// console.log(jsLoader);
-
-// 	// if (jsLoader) {
-// 	//	jsLoader.use.loader = "esbuild-loader";
-// 	// 	jsLoader.use.options = options;
-// 	// }
-// }
-
 module.exports = {
+	i18n: {
+		locales: ["en", "de"],
+		defaultLocale: "en"
+	},
 	eslint: {
 		// Warning: Dangerously allow production builds to successfully complete even if
 		// your project has ESLint errors.

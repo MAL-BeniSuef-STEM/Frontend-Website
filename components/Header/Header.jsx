@@ -1,3 +1,4 @@
+// Components
 import NavLink from "./NavLink";
 
 const Header = () => {
