@@ -8,6 +8,7 @@ import NavLink from "../components/Header/NavLink";
 function Error() {
 	const t = useTranslations();
 	return (
+		<>
 			<SEO title="Error Page" />
 			<div className="h-screen text-center bg-no-repeat bg-cover bg-hero-pattern bg-brand-gray">
 				<h1 className="pt-56 font-bold leading-tight tracking-wider ">
@@ -18,6 +19,7 @@ function Error() {
 					{t("t-3")} <NavLink href="/" text={t("t-home")} />{" "}
 				</p>
 			</div>
+		</>
 	);
 }
 
