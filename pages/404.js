@@ -10,8 +10,8 @@ function Error() {
 	return (
 		<>
 			<SEO title="Error Page" />
-			<div className="h-screen text-center bg-no-repeat bg-cover bg-hero-pattern bg-brand-gray">
-				<h1 className="pt-56 font-bold leading-tight tracking-wider ">
+			<div className="h-screen flex justify-center items-center text-center bg-no-repeat bg-cover bg-hero-pattern bg-brand-gray">
+				<h1 className="font-bold leading-tight tracking-wider ">
 					{t("404")}
 				</h1>
 				<h2>{t("t-2")}</h2>
