@@ -5,16 +5,16 @@ import Image from "next/image";
 import Layout from "../layout";
 import { SEO, ImageSlider } from "../components";
 
-const About = () => {
+const Team = () => {
 	const t = useTranslations();
 	return (
 		<Layout>
-			<SEO title="About US" />
+			<SEO title="Our Team" />
 			<div className="bg-no-repeat bg-cover bg-hero-pattern bg-brand-gray">
 				<section className="container flex flex-col items-center h-screen text-center justify-evenly lg:flex-row lg:justify-between lg:text-left">
 					<div>
 						<h1 className="font-bold leading-tight tracking-wider">
-							{t("about-page")}
+							{t("team-page")}
 						</h1>
 					</div>
 					<div className="flex justify-center lg:justify-end">
@@ -43,10 +43,10 @@ export function getStaticProps({ locale }) {
 		props: {
 			messages: {
 				...require(`../messages/shared/${locale}.json`),
-				...require(`../messages/about/${locale}.json`)
+				...require(`../messages/team/${locale}.json`)
 			}
 		}
 	};
 }
 
-export default About;
+export default Team;

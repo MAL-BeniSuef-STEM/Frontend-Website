@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import Image from "next/image";
 
 // Components
 import Button from "../Button/Button";
@@ -7,7 +8,13 @@ const Card = ({ title, content, image, page }) => {
 	return (
 		<div className="grid w-full grid-cols-1 p-2 my-14 md:grid-cols-2 gap-x-4">
 			<div className="flex items-center justify-center">
-				<img src={image} alt={title} className="h-48" />
+				<Image
+					src={image}
+					alt={title}
+					objectFit="cover"
+					height={200}
+					width={350}
+				/>
 			</div>
 			<div className="flex flex-col justify-center">
 				<h5 className="capitalize">{page}</h5>

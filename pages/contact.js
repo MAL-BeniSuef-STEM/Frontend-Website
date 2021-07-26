@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 // Components
 import Layout from "../layout";
@@ -17,10 +18,12 @@ const Contact = () => {
 						</h1>
 					</div>
 					<div className="flex justify-center lg:justify-end">
-						<img
+						<Image
+							width={400}
+							height={400}
+							objectFit="cover"
 							src="/logo.png"
 							alt="Mal BeniSuef Logo"
-							className="w-96"
 						/>
 					</div>
 				</section>
@@ -28,10 +31,12 @@ const Contact = () => {
 			<div className="container">
 				<div className="grid grid-cols-1 gap-4 p-2 my-14 md:grid-cols-3">
 					<div className="text-center">
-						<img
-							src="/Vectorc.png"
-							alt="call icon"
-							className="mx-auto"
+						<Image
+							src="/vectors/home.png"
+							alt="home icon"
+							width={95}
+							height={95}
+							objectFit="cover"
 						/>
 						<h3 className="mt-3 capitalize">{t("call-us")}</h3>
 						<p className="mt-3 text-[#797979]">
@@ -40,10 +45,12 @@ const Contact = () => {
 						</p>
 					</div>
 					<div className="text-center">
-						<img
-							src="/Vectorc.png"
+						<Image
+							src="/vectors/call.png"
 							alt="call icon"
-							className="mx-auto"
+							width={95}
+							height={95}
+							objectFit="cover"
 						/>
 						<h3 className="mt-3 capitalize">{t("call-us")}</h3>
 						<p className="mt-3 text-[#797979]">
@@ -52,10 +59,12 @@ const Contact = () => {
 						</p>
 					</div>
 					<div className="text-center">
-						<img
-							src="/Vectorc.png"
-							alt="call icon"
-							className="mx-auto"
+						<Image
+							src="/vectors/mail.png"
+							alt="mail icon"
+							width={130}
+							height={100}
+							objectFit="cover"
 						/>
 						<h3 className="mt-3 capitalize">{t("call-us")}</h3>
 						<p className="mt-3 text-[#797979]">
@@ -68,10 +77,12 @@ const Contact = () => {
 
 			<div className="grid w-full grid-cols-1 p-2 my-14 md:grid-cols-2 gap-x-4">
 				<div className="flex items-center justify-center">
-					<img
-						src="/Vectorc.png"
-						alt="/vectorc.png"
-						className="h-48"
+					<Image
+						src="/vectors/contact.png"
+						alt="contact img"
+						width={400}
+						height={400}
+						objectFit="cover"
 					/>
 				</div>
 				<div className="flex flex-col justify-center">

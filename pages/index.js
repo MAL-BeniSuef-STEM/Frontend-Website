@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 // Components
 import { Card, SEO } from "../components";
@@ -20,10 +21,12 @@ export default function Home() {
 							<p>{t("description")}</p>
 						</div>
 						<div className="flex justify-center lg:justify-end">
-							<img
+							<Image
+								width={400}
+								height={400}
+								objectFit="cover"
 								src="/logo.png"
 								alt="Mal BeniSuef Logo"
-								className="w-96"
 							/>
 						</div>
 					</section>

@@ -1,4 +1,5 @@
 import Slider from "react-slick";
+import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -43,10 +44,13 @@ const ImageSlider = () => {
 				<div key={element} className="w-full px-2">
 					<div className="w-full h-auto cursor-pointer">
 						<div className="overflow-hidden rounded-t-2xl">
-							<img
+							<Image
 								src="/test.jpg"
 								alt="Ahmed Waled - Vice Head IT"
 								title="Ahmed Waled - Vice Head IT"
+								objectFit="cover"
+								height={500}
+								width={500}
 							/>
 						</div>
 						<div className="w-full h-auto p-2 font-thin text-center bg-brand-gray rounded-b-2xl">
