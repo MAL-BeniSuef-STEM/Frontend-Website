@@ -1,5 +1,4 @@
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import {
 	GrFacebookOption,
@@ -17,12 +16,9 @@ const Footer = () => {
 	return (
 		<footer className="w-full bg-brand-gray">
 			<div className="container flex flex-col-reverse justify-between gap-6 py-10 lg:flex-row">
-				<Image
+				<img
 					src="/logo.png"
 					alt="Mal Beni Suef Logo"
-					objectFit="cover"
-					height={250}
-					width={250}
 					className="self-center w-64 h-64"
 				/>
 				<FooterColumn
